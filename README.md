@@ -5,8 +5,11 @@ Quickly setup a Kubernetes cluster in various environments
 |  Cluster         | Folder                            |
 |  ------          | -----                             |
 |   `minikube`     | [minikube/](minikube/)            |  
+|   `kind`         | [kind/](kind/)                    |
 
 ## Minikube
+
+More information available [here](https://minikube.sigs.k8s.io/docs/start/)
 
 ```bash
 cd minikube
@@ -48,4 +51,13 @@ Clean up:
 
 ```bash
 make delete
+```
+
+## Kind
+
+More information available [here](https://kind.sigs.k8s.io/docs/user/quick-start/)
+
+```bash
+cd kind
+make kind
 ```

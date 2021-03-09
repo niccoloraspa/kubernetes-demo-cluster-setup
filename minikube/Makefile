@@ -7,11 +7,11 @@ cni?=cilium
 .PHONY: minikube
 minikube:
 	minikube start \
-    --kubernetes-version $(kubernetes-version) \
-    --driver $(driver) \
-    --memory $(memory) \
-    --cpus $(cpu) \
-    --cni $(cni) 
+        --kubernetes-version $(kubernetes-version) \
+        --driver $(driver) \
+        --memory $(memory) \
+        --cpus $(cpu) \
+        --cni $(cni) 
 
 .PHONY: addons
 addons:
