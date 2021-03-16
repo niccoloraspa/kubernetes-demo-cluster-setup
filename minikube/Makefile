@@ -3,6 +3,10 @@ driver?=virtualbox
 memory?=2048
 cpu?=2
 cni?=cilium
+nodes?=1
+
+.PHONY: setup
+setup: minikube addons
 
 .PHONY: minikube
 minikube:
@@ -11,7 +15,8 @@ minikube:
         --driver $(driver) \
         --memory $(memory) \
         --cpus $(cpu) \
-        --cni $(cni) 
+        --cni $(cni) \
+        --nodes $(nodes)
 
 .PHONY: addons
 addons:
