@@ -1,8 +1,8 @@
-kubernetes-version?=v1.19.4
+kubernetes-version?=v1.21.2
 driver?=virtualbox
 memory?=2048
 cpu?=2
-cni?=cilium
+cni?=calico
 nodes?=1
 
 .PHONY: setup
@@ -15,7 +15,6 @@ minikube:
         --driver $(driver) \
         --memory $(memory) \
         --cpus $(cpu) \
-        --cni $(cni) \
         --nodes $(nodes)
 
 .PHONY: addons
@@ -25,4 +24,4 @@ addons:
 
 .PHONY: delete
 delete:
-	minikube delete 
+	minikube delete
